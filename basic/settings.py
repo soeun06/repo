@@ -51,13 +51,13 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'sns_project.urls'
+ROOT_URLCONF = 'basic.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         # template 상속 적용하기
-        'DIRS': [os.path.join(BASE_DIR,'sns_project','templates')],
+        'DIRS': [os.path.join(BASE_DIR,'basic','templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -70,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'sns_project.wsgi.application'
+WSGI_APPLICATION = 'basic.wsgi.application'
 
 
 # Database
@@ -125,6 +125,6 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATICFIELDS_DIRS  = [os.path.join(BASE_DIR, 'sns_project', 'static')]
+STATICFIELDS_DIRS  = [os.path.join(BASE_DIR, 'basic', 'static')]
 
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
